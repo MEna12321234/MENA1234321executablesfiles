@@ -1,13 +1,138 @@
 ::head
 :MAIN
 Title WIP
+color 0f
 echo you must wait..
 set /p Text=
-if %Text%== exescript goto EXEscript
+if /i %Text%== DevMod goto Dev
+if /i not %Text%== DevMod goto MAIN
 ::End Head
 
 
-::executable script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:: DEVELOPER OPTIONS
+
+:Dev
+cls
+color 03
+Title WIP Developer mode
+echo (type Back to exit Developer mode)
+echo Develper Options:
+echo see executable script (type exescrpt)
+echo emulate errors (type err)
+set /p DEVO=Dev:
+if /i %DEVO%== Back goto MAIN
+if /i %DEVO%== exescrpt goto exescript
+if /i %DEVO%== err goto ERRORdev
+if /i not %DEVO%== Back.exescrpt.err goto Dev
+
+:ERRORdev
+cls
+echo ERRORS:
+echo test error (type test)
+set /p ERR=
+if /i %ERR%== test goto ERR1
+if /i not %ERR%== test goto ERRORdev
+
+:ERR1
+cls
+color 0c
+title ERROR n.1
+echo this is a test...
+pause >nul
+goto main
+
 :exescript
 cls
 echo executable script:
@@ -32,7 +157,6 @@ echo pause
 
 pause >nul
 goto MAIN
-::End executable script
 
 
 ::END
