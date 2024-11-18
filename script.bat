@@ -6,7 +6,7 @@ cls
 Title WIP
 color 0f
 echo this is still a WIP batch file
-echo (type close to exit..)
+echo (type close to delete the script from your tempdirectory..)
 set /p Text=
 if /i %Text%== CLOSE goto CLOSE
 if /i %Text%== DevMod goto Dev
