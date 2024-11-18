@@ -5,8 +5,10 @@
 cls
 Title WIP
 color 0f
-echo you must wait..
+echo this is still a WIP batch file
+echo (type close to exit..)
 set /p Text=
+if /i %Text%== CLOSE goto CLOSE
 if /i %Text%== DevMod goto Dev
 if /i not %Text%== DevMod goto MAIN
 ::End Head
@@ -161,5 +163,7 @@ echo pause
 pause >nul
 goto MAIN
 
-
+:CLOSE
+title press enter..
+pause >nul
 ::END
