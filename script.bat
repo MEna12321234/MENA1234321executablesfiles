@@ -1,3 +1,5 @@
+@echo off
+
 ::head
 :MAIN
 cls
