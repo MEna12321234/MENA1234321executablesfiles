@@ -1,5 +1,6 @@
 ::head
 :MAIN
+cls
 Title WIP
 color 0f
 echo you must wait..
